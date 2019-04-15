@@ -22,7 +22,7 @@ console.log(alert(message));
 
 //Задача 2
 
-let credits = 23580;
+/*let credits = 23580;
 const pricePerDroid = 3000;
 let totalPrice;
 let rest;
