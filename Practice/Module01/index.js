@@ -18,21 +18,21 @@ if(login == 'admin') {
     console.log('Welcome');
 } */
 
-/*const role = prompt('What is your role?');
-const day = prompt('What is the day today?')
+// const role = prompt('What is your role?');
+// const day = prompt('What is the day today?')
 
-if (role !== null) {
-    if (role !== 'admin') {
-        console.log('works');
-    } else if (day.toLowerCase() !== 'monday') {
-        alert('Hello ' + role);
-        const question = confirm('Are you ready?');
-        if (question)
-            alert('Let\'s start');
-    } else {
-        console.log("Today is Monday. Go back tomorrow!");
-    }
-}
+// if (role !== null) {
+//     if (role !== 'admin') {
+//         console.log('works');
+//     } else if (day.toLowerCase() !== 'monday') {
+//         alert('Hello ' + role);
+//         const question = confirm('Are you ready?');
+//         if (question)
+//             alert('Let\'s start');
+//     } else {
+//         console.log("Today is Monday. Go back tomorrow!");
+//     }
+// }
 
 // const role = prompt('What is your role?');
 // role === 'admin' ? console.log('Welcome') :

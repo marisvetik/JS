@@ -1,21 +1,28 @@
 'use strict'
 
 
-let deliveryCountry = prompt('Пожалуйста укажите желаемую страну доставки');
-let deliveryPrice
+let deliveryCountry = prompt('Пожалуйста укажите желаемую страну доставки').toLowerCase();
+const deliveryPriceChina = 100;
+const deliveryPriceSouthAmerica = 250;
+const deliveryPriceAustralia = 170;
+const deliveryPriceIndia = 80;
+const deliveryPriceJamaica = 120;
 
-switch (deliveryCountry.toLowerCase()) {
+switch (deliveryCountry) {
     case "китай":
-    deliveryPrice = 100;
+    alert(`Доставка в ${deliveryCountry} будет стоить ${deliveryPriceChina} кредитов`);
+    break;
     case "южная америка":
-    deliveryPrice = 250;
+    alert(`Доставка в ${deliveryCountry} будет стоить ${deliveryPriceSouthAmerica} кредитов`);
+    break;
     case "австралия":
-    deliveryPrice = 170;
+    alert(`Доставка в ${deliveryCountry} будет стоить ${deliveryPriceAustralia} кредитов`);
+    break;
     case "индия":
-    deliveryPrice = 80;
+    alert(`Доставка в ${deliveryCountry} будет стоить ${deliveryPriceIndia} кредитов`);
+    break;
     case "ямайка":
-    deliveryPrice = 120;
-    alert(`Доставка в ${deliveryCountry.toLowerCase()} будет стоить ${deliveryPrice} кредитов`);
+    alert(`Доставка в ${deliveryCountry} будет стоить ${deliveryPriceJamaica} кредитов`);
     break;
 
     default:
