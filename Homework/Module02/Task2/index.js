@@ -12,11 +12,10 @@ do {
         alert('Добро пожаловать!');
         break;
     } 
-    if(attemptsLeft === 0) {
+    if(!attemptsLeft) {
         alert('У вас закончились попытки, аккаунт заблокирован!');
         break;
     }
-    if(!passwords.includes(userPassword)) {
        alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`); 
-    }
-} while (attemptsLeft > 0);
+    
+} while (attemptsLeft);
