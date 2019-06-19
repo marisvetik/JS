@@ -31,9 +31,12 @@ const notepad = {
     },
 
     updateNoteContent(id, updatedContent) {
-        if (this.findNoteById(id)) {
-            return this.notes[this.notes.indexOf(this.findNoteById(id))] = {...this.findNoteById(id), ...updatedContent}
-        }
+        const newObj = {
+          ...this.findNoteById(id),
+          ...updatedContent,
+        };
+        this.notes[this.notes.indexOf(this.findNoteById(id))] = newObj;
+        return newObj;
     },
     
     updateNotePriority(id, priority) {
