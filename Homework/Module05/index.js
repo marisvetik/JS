@@ -23,12 +23,15 @@ const Notepad = function Notepad(notes = []) {
     };
   
     this.updateNoteContent = function(id, updatedContent) { 
-        const newObj = {
-            ...this.findNoteById(id),
-            ...updatedContent,
-          };
-          this.notes[this.notes.indexOf(this.findNoteById(id))] = newObj;
-          return newObj;
+        // const newObj = {
+        //     ...this.findNoteById(id),
+        //     ...updatedContent,
+        //   };
+        //   this.notes[this.notes.indexOf(this.findNoteById(id))] = newObj;
+        //   return newObj;
+        if(this.findNoteById) {
+          return Object.assign(this.findNoteById(id), updatedContent);
+        }
     };
   
     this.updateNotePriority = function(id, priority) {
