@@ -35,12 +35,9 @@ const Notepad = function Notepad(notes = []) {
     };
   
     this.updateNotePriority = function(id, priority) {
-      for (let note of this.notes) {
-        if (note.id === id) {
-          note.priority = priority;
-          return note;
-        }
-      }
+      const updatedNote = this.findNoteById(id);
+      updatedNote.priority = priority;
+      return updatedNote;
     };
   
     this.filterNotesByQuery = function(query) {
