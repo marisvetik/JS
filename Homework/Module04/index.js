@@ -42,18 +42,15 @@ const notepad = {
         }
     },
     
-    updateNotePriority(id, priority) {
-        for (let note of this.notes) {
-            if (note.id === id) {
-                note.priority = priority;
-                return note;
-            }
-        }
+    updateNotePriority = function(id, priority) {
+      const updatedNote = findNoteById(id);
+      updatedNote.priority = priority;
+      return updatedNote;
     },
     
     filterNotesByQuery(query) {
         const queryNotes = [];
-        for (let note of this.notes) {
+        for (let note of notes) {
             if(note.title.toLowerCase().includes(query.toLowerCase()) || note.body.toLowerCase().includes(query.toLowerCase())) {
                 queryNotes.push(note);
                 return queryNotes;
